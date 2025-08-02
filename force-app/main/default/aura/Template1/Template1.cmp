@@ -1,0 +1,29 @@
+<aura:component implements="lightning:appHomeTemplate" access="global">
+    <aura:attribute name="leftColumn" type="Aura.Component[]" access="global"/>
+    <aura:attribute name="rightColumn" type="Aura.Component[]" access="global"/>
+    <aura:attribute name="collapsedView" type="Boolean" default="false"/>
+
+    <div aura:id="container">
+        <lightning:buttonStateful
+            state="{!v.collapsedView}"
+            labelWhenOn="Show Split View"
+            labelWhenOff="Hide Split View"
+            labelWhenHover="Show Split View"
+            class="btn"
+            iconNameWhenHover="utility:richtextindent"
+            iconNameWhenOff="utility:richtextoutdent"
+            iconNameWhenOn="utility:richtextindent"
+            onclick="{!c.toggleState}"
+        />
+        <lightning:layout>
+            <lightning:layoutItem aura:id="leftCol" class="left expanded" size="4">
+                {!v.leftColumn}
+            </lightning:layoutItem>
+            <lightning:layoutItem aura:id="rightCol" class="right" size="8">
+                {!v.rightColumn}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+
+
+</aura:component>

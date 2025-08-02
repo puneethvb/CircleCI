@@ -1,0 +1,14 @@
+p {
+    color:greenyellow;
+    font-size: 25px;
+}
+
+.cl1{
+    color: aqua;
+    font-size: 25px;
+}
+
+.cl1:hover{
+    color: aquamarine;
+    font-size: 50px;
+}

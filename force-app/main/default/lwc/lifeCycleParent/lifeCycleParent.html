@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Life Cycle Parent">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label="Toggle Child" onclick={handleClick} variant="brand">
+            </lightning-button>
+            <template lwc:if={isChildVisible}>
+                <c-life-cycle-child></c-life-cycle-child>
+            </template>
+        </div>
+        
+    </lightning-card>
+</template>

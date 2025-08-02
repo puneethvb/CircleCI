@@ -1,0 +1,7 @@
+.left .slds-input{
+    padding-left: var(--lwc-spacingLarge);
+}
+
+.left .slds-input{
+    padding-right: var(--lwc-spacingLarge);
+}

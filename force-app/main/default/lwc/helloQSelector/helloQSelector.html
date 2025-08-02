@@ -1,0 +1,9 @@
+<template>
+    <lightning-card class="slds-var-m-around_small" title="Query Selector Exampl">
+        <h1>Hello I am h1</h1>
+        <lightning-button label="Fetch Details" onclick={fetchDetails}></lightning-button>
+        <template for:each={userNames} for:item="user">
+            <div key={item} class="nameC">Testsnbdnsdb</div>
+        </template>
+    </lightning-card>
+</template>

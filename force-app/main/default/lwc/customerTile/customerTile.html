@@ -1,0 +1,14 @@
+<template>
+    <div class="pointer" onclick={handleClick}>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item>
+                <lightning-icon icon-name={icon}></lightning-icon>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small">
+                <a href={navRef} alt={altText}>{customer.name}</a>
+                <p>Status: {customer.status}</p>
+                <p>Email: {customer.email}</p>
+            </lightning-layout-item>            
+        </lightning-layout>
+    </div>    
+</template>

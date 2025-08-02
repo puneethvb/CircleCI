@@ -1,0 +1,37 @@
+<template>
+    <template if:true={errorMsg}>
+        <c-error-panel friendly-message={msgForUser}
+        errors={errorMsg}></c-error-panel>
+    </template>
+
+    <template if:true={detailFields}>
+        <lightning-layout multiple-rows="true" class="slds-var-m-horizontal_small">
+            <lightning-layout-item size="12">
+                <h2 class="sldsslds-text-heading_small slds-var-p-bottom_small">
+                    Customer Info:
+                </h2>
+                <lightning-record-form
+                    class="slds-var-m-vertical_small"
+                    record-id={recordId}
+                    fields={detailFields}
+                    object-api-name={sobjecttype}
+                    mode="view"
+                    columns="2"
+                    onsuccess={handleSavedRecord}
+                >
+                </lightning-record-form>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <div class="slds-clearfix slds-var-p-top_large">
+            <lightning-button
+                variant="brand"
+                label="Draft Reservation"
+                onclick={handleDraft}
+                class="slds-var-m-left_x-small"
+            >
+            </lightning-button>
+        </div>
+    </template>
+    <br/>
+</template>

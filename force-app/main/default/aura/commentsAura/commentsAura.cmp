@@ -1,0 +1,39 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+    access="global">
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> -->
+    <!--style to increase width-->
+    <aura:html tag="style">
+        .slds-modal__container{
+        max-width: 90rem !important;
+        width:90% !important;
+        overflow-y: hidden !important;
+        overflow-x:hidden !important;
+        <!--added 1-->
+        height:unset !important;
+        max-height:unset !important;
+        }
+        .modal-body{
+      
+        }
+        .slds-modal__footer{
+        display: none !important;
+        
+        }
+        .slds-modal__header{
+        font-weight: bold;
+    
+        }
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+       
+        }
+        .slds-page-header{
+        display:none;
+        }
+
+    </aura:html>
+
+    <!--<c:caseCommentsListerPaginateLWC recordId="{!v.recordId}" onclose="{!c.closeQA}" />-->
+</aura:component>

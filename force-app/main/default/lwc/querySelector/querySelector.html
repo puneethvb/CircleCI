@@ -1,0 +1,15 @@
+<template>
+   <lightning-card title="Query Selector">
+    <div class="slds-var-m-around_medium">
+        <p> This is a p tag</p>
+        <lightning-button label = "click me" onclick={handleClick1}></lightning-button>
+    </div>
+    <template for:each={users} for:item ='user'>
+        <div class="name" key={user}>
+            {user}
+        </div>
+    </template>
+    <div class="child" lwc:dom = "manual"></div>
+   </lightning-card>
+    
+</template>
